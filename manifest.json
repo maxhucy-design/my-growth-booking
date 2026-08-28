@@ -1,0 +1,16 @@
+{
+  "name": "體能課程預約系統",
+  "short_name": "課程預約",
+  "description": "即時線上預約訓練課程",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#f3f4f6",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2964/2964514.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
