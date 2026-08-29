@@ -177,7 +177,7 @@
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
       </button>
       <div>
-        <h1 class="text-sm font-bold text-stone-100 tracking-wide" id="header-title">學員月曆預約</h1>
+        <h1 class="text-sm font-bold text-stone-100 tracking-wide" id="header-title">學員預約</h1>
         <p class="text-[10px] text-stone-400" id="header-subtitle">選擇日期快速查看時段</p>
       </div>
     </div>
@@ -1565,7 +1565,7 @@
         if (role === 'student') {
           vStudent.classList.remove('hidden');
           nStudent.classList.replace('text-stone-400', 'text-[#d8a46f]');
-          hTitle.innerText = '學員月曆預約';
+          hTitle.innerText = '學員預約';
           hSub.innerText = selectedFilterTeacher ? `已篩選【${selectedFilterTeacher}】老師的課程` : '選擇日期快速查看時段';
         } else if (role === 'my-bookings') {
           vMyBookings.classList.remove('hidden');
