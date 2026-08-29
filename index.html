@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>MY Growth 課程預約</title>
+  <title>MY Growth 品牌預約中心</title>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#0a0908">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -26,13 +26,9 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    /* 活潑亮眼 Call To Action 金金漸層 */
     .cta-btn-gradient {
       background: linear-gradient(135deg, #fae2cc 0%, #e0ab77 40%, #c49156 100%);
       box-shadow: 0 10px 28px -6px rgba(224, 171, 119, 0.55), 0 0 16px rgba(224, 171, 119, 0.25);
-    }
-    .cta-btn-gradient:hover {
-      background: linear-gradient(135deg, #fff0e0 0%, #eabb88 40%, #d4a065 100%);
     }
     .glass-card {
       background: rgba(26, 23, 20, 0.8);
@@ -80,7 +76,6 @@
       <h1 class="text-3xl font-black tracking-[0.25em] gold-gradient-text font-serif-title mt-2.5">MY Growth</h1>
       <p class="text-xs tracking-[0.3em] text-stone-400 mt-0.5 uppercase font-medium">Bespoke Training &amp; Aesthetic</p>
 
-      <!-- Instagram 超連結按鈕 -->
       <a href="https://www.instagram.com/mygro.tw?igsi=MWN4MGh3ZGtkenhqMA==" target="_blank" rel="noopener noreferrer" 
          class="inline-flex items-center gap-1.5 mt-2 px-3.5 py-1 rounded-full bg-stone-900/90 border border-[#d8a46f]/40 text-xs font-semibold text-[#d8a46f] hover:text-white hover:border-[#d8a46f] transition-all shadow-sm active:scale-95">
         <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
@@ -92,62 +87,86 @@
 
     <!-- 品牌特色項目卡片 -->
     <div class="my-3 glass-card p-4 rounded-3xl w-full max-w-sm space-y-3 text-left">
-      <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-xl bg-stone-900/95 border border-[#d8a46f]/40 flex items-center justify-center text-sm shrink-0 shadow-inner">🏋️‍♂️</div>
-        <p class="text-sm font-bold tracking-wide text-stone-100">Strength Training</p>
+      <div>
+        <div class="flex items-center gap-1.5 mb-2">
+          <span class="text-xs">⚡</span>
+          <span class="text-xs font-bold tracking-wider text-[#d8a46f] uppercase font-serif-title">專業項目</span>
+        </div>
+        <div class="space-y-2 pl-0.5">
+          <div class="flex items-center gap-2.5">
+            <div class="w-7 h-7 rounded-xl bg-stone-900/95 border border-[#d8a46f]/40 flex items-center justify-center text-xs shrink-0 shadow-inner">🏃‍♂️</div>
+            <p class="text-xs font-bold tracking-wide text-stone-100">Crossfit &amp; HYROX &amp; Running</p>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <div class="w-7 h-7 rounded-xl bg-stone-900/95 border border-[#d8a46f]/40 flex items-center justify-center text-xs shrink-0 shadow-inner">🏋️‍♂️</div>
+            <p class="text-xs font-bold tracking-wide text-stone-100">Strength training</p>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <div class="w-7 h-7 rounded-xl bg-stone-900/95 border border-[#d8a46f]/40 flex items-center justify-center text-xs shrink-0 shadow-inner">👙</div>
+            <p class="text-xs font-bold tracking-wide text-stone-100">Body sculpting</p>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <div class="w-7 h-7 rounded-xl bg-stone-900/95 border border-[#d8a46f]/40 flex items-center justify-center text-xs shrink-0 shadow-inner">🧘‍♀️</div>
+            <p class="text-xs font-bold tracking-wide text-stone-100">Recovery and Wellness</p>
+          </div>
+        </div>
+
+        <div class="mt-2.5 bg-stone-950/60 p-2 rounded-xl border border-stone-800/80 flex items-center justify-center gap-2 text-[11px] text-stone-300 font-semibold">
+          <span>👥</span>
+          <span>課程形式 : 1對1 ｜ 團體課 ｜ 企業課程</span>
+        </div>
       </div>
-      <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-xl bg-stone-900/95 border border-[#d8a46f]/40 flex items-center justify-center text-sm shrink-0 shadow-inner">🏃‍♂️</div>
-        <p class="text-sm font-bold tracking-wide text-stone-100">Running &amp; HYROX &amp; Crossfit</p>
-      </div>
-      <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-xl bg-stone-900/95 border border-[#d8a46f]/40 flex items-center justify-center text-sm shrink-0 shadow-inner">🧘‍♀️</div>
-        <p class="text-sm font-bold tracking-wide text-stone-100">Recovery &amp; Wellness</p>
-      </div>
-      <div class="flex items-center justify-center gap-2 my-1">
+
+      <div class="flex items-center justify-center gap-2 my-0.5">
         <span class="w-full h-[1px] bg-gradient-to-r from-transparent via-[#d8a46f]/35 to-transparent"></span>
       </div>
-      <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-xl bg-stone-900/95 border border-[#d8a46f]/40 flex items-center justify-center text-sm shrink-0 shadow-inner">🩺</div>
-        <p class="text-xs text-stone-200 font-bold tracking-wide">物理治療師 ｜ 營養師 ｜ 運動放鬆師</p>
-      </div>
-      <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-xl bg-stone-900/95 border border-[#d8a46f]/40 flex items-center justify-center text-sm shrink-0 shadow-inner">👥</div>
-        <p class="text-xs text-stone-200 font-bold tracking-wide">1對1 ｜ 團體課 ｜ 企業課程</p>
+
+      <div>
+        <div class="flex items-center gap-1.5 mb-2">
+          <span class="text-xs">🤝</span>
+          <span class="text-xs font-bold tracking-wider text-[#d8a46f] uppercase font-serif-title">合作課程</span>
+        </div>
+        <div class="grid grid-cols-3 gap-2 text-center text-[11px] font-bold text-stone-200">
+          <div class="bg-stone-950/80 p-2 rounded-xl border border-stone-800/80 flex flex-col items-center gap-1">
+            <span class="text-sm">💆‍♂️</span>
+            <span>運動按摩</span>
+          </div>
+          <div class="bg-stone-950/80 p-2 rounded-xl border border-stone-800/80 flex flex-col items-center gap-1">
+            <span class="text-sm">🩺</span>
+            <span>物理治療</span>
+          </div>
+          <div class="bg-stone-950/80 p-2 rounded-xl border border-stone-800/80 flex flex-col items-center gap-1">
+            <span class="text-sm">🥗</span>
+            <span>營養學</span>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- 主要入口按鈕排版 (醒目 Call to Action + 下方 1:1:1 三等分) -->
+    <!-- 主要入口按鈕排版 -->
     <div class="w-full max-w-sm space-y-3 pb-2">
-      
-      <!-- 頂部獨立醒目 Call To Action 按鈕 -->
-      <button onclick="switchRole('student')" class="w-full py-4 px-4 rounded-2xl cta-btn-gradient text-stone-950 font-black text-sm tracking-wider active:scale-95 transition-all flex items-center justify-center gap-2 relative overflow-hidden group">
+      <button onclick="switchRole('student')" class="w-full py-4 px-4 rounded-2xl cta-btn-gradient text-stone-950 font-black text-sm tracking-wider active:scale-95 transition-all flex items-center justify-center gap-2 relative overflow-hidden group shadow-lg">
         <span class="text-lg">✨</span>
         <span class="tracking-wide">點我完成預約 GO ！</span>
-        <span class="text-lg animate-bounce">🚀</span>
+        <span class="text-xl animate-pulse">💪</span>
       </button>
 
-      <!-- 下方 1:1:1 三等分平行排版 -->
       <div class="grid grid-cols-3 gap-2">
-        <!-- 1. 專業師資介紹 -->
         <button onclick="switchRole('teachers-info')" class="w-full py-3.5 px-1 rounded-2xl glass-btn-sub text-[#d8a46f] hover:text-white hover:border-[#d8a46f] font-bold text-[11px] tracking-tight active:scale-95 transition-all flex flex-col items-center justify-center gap-1">
           <span class="text-base">🌟</span>
           <span>專業師資介紹</span>
         </button>
 
-        <!-- 2. 我的預約查詢 -->
         <button onclick="switchRole('my-bookings')" class="w-full py-3.5 px-1 rounded-2xl glass-btn-sub text-stone-200 hover:text-white hover:border-[#d8a46f] font-bold text-[11px] tracking-tight active:scale-95 transition-all flex flex-col items-center justify-center gap-1">
           <span class="text-base">📋</span>
           <span>我的預約查詢</span>
         </button>
 
-        <!-- 3. 老師專區 -->
         <button onclick="switchRole('teacher')" class="w-full py-3.5 px-1 rounded-2xl glass-btn-sub text-stone-400 hover:text-white hover:border-stone-500 font-bold text-[11px] tracking-tight active:scale-95 transition-all flex flex-col items-center justify-center gap-1">
           <span class="text-base">🔐</span>
           <span>老師專區</span>
         </button>
       </div>
-
     </div>
   </section>
 
@@ -158,7 +177,7 @@
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
       </button>
       <div>
-        <h1 class="text-sm font-bold text-stone-100 tracking-wide" id="header-title">學員預約專區</h1>
+        <h1 class="text-sm font-bold text-stone-100 tracking-wide" id="header-title">學員預約</h1>
         <p class="text-[10px] text-stone-400" id="header-subtitle">選擇日期快速查看時段</p>
       </div>
     </div>
@@ -168,8 +187,16 @@
   <!-- ==================== 主內容視圖區 ==================== -->
   <main id="sub-content" class="hidden flex-1 p-4 pb-24 overflow-y-auto relative z-10">
     
-    <!-- 視圖 1：學員預約專區 -->
+    <!-- 視圖 1：學員預約 -->
     <section id="view-student" class="space-y-4">
+      <div id="teacher-filter-banner" class="hidden glass-card p-2.5 rounded-2xl flex justify-between items-center border border-[#d8a46f]/30">
+        <div class="flex items-center gap-2 text-xs">
+          <span class="text-[#d8a46f]">🎯</span>
+          <span>正在查看：<b id="filter-teacher-name" class="text-[#d8a46f]"></b> 的專屬課程</span>
+        </div>
+        <button onclick="clearTeacherFilter()" class="text-[11px] text-rose-400 hover:underline px-2 py-0.5">顯示全部</button>
+      </div>
+
       <div class="glass-card p-4 rounded-3xl">
         <div class="flex justify-between items-center mb-3 px-1">
           <h2 id="cal-month-title" class="font-bold text-stone-200 text-sm tracking-wider font-serif-title"></h2>
@@ -209,7 +236,6 @@
         </div>
       </div>
 
-      <!-- 月份搜尋篩選列 -->
       <div id="my-bookings-month-filter" class="hidden glass-card p-3 rounded-2xl flex justify-between items-center">
         <span class="text-xs font-bold text-stone-300">篩選月份</span>
         <div class="flex items-center gap-1.5 bg-stone-950/90 px-2.5 py-1 rounded-xl border border-stone-800">
@@ -220,7 +246,6 @@
         <button onclick="resetSearchMonth()" class="text-[10px] text-stone-400 hover:text-white underline">顯示全部</button>
       </div>
 
-      <!-- 查詢結果列表 -->
       <div id="my-bookings-results" class="space-y-3">
         <div class="text-center py-8 text-stone-500 text-xs">
           請在上方輸入手機號碼以查看您的預約紀錄
@@ -228,27 +253,28 @@
       </div>
     </section>
 
-    <!-- 視圖 3：專業老師介紹 (Ariel Kuo) -->
+    <!-- 視圖 3：專業師資介紹 (Ariel Kuo 完整資歷 Rollback 復原) -->
     <section id="view-teachers-info" class="hidden space-y-4">
       <div class="text-center py-1">
         <span class="text-[10px] tracking-[0.3em] text-[#d8a46f] uppercase font-light">Professional Instructor</span>
         <h2 class="text-lg font-bold text-stone-100 mt-0.5">專業師資陣容與認證</h2>
       </div>
 
+      <!-- Ariel Kuo 老師專屬完整卡片 -->
       <div class="glass-card p-5 rounded-3xl space-y-4 border border-[#d8a46f]/35 shadow-xl">
         <div class="flex items-center gap-4">
           <div class="w-20 h-20 rounded-full p-[2px] bg-gradient-to-tr from-[#d8a46f] via-amber-200 to-stone-800 shrink-0 shadow-xl relative overflow-hidden">
-            <img src="ariel.png" alt="Ariel Kuo 老師" class="w-full h-full object-cover rounded-full bg-black">
+            <img src="ariel.png" onerror="this.src='logo.png'" alt="Ariel Kuo 老師" class="w-full h-full object-cover rounded-full bg-black">
           </div>
           <div>
             <div class="flex items-center gap-2">
               <h3 class="font-bold text-xl text-stone-100 font-serif-title tracking-wider">Ariel Kuo</h3>
-              <span class="text-[10px] bg-[#d8a46f]/20 text-[#d8a46f] border border-[#d8a46f]/40 px-2 py-0.5 rounded-full font-bold">總教練</span>
             </div>
             <p class="text-xs text-stone-300 mt-1 font-medium">體能專項 ｜ 健美競賽 ｜ 產後與銀髮指導</p>
           </div>
         </div>
 
+        <!-- 經歷 (Experience) -->
         <div class="bg-stone-950/70 p-3.5 rounded-2xl border border-stone-800/80 space-y-2">
           <div class="flex items-center gap-1.5 text-xs font-bold text-[#d8a46f] tracking-wide">
             <span>🏆</span> 經歷
@@ -266,6 +292,7 @@
           </ul>
         </div>
 
+        <!-- 證照 (Certifications) -->
         <div class="bg-stone-950/70 p-3.5 rounded-2xl border border-stone-800/80 space-y-2">
           <div class="flex items-center gap-1.5 text-xs font-bold text-emerald-400 tracking-wide">
             <span>📜</span> 證照
@@ -280,28 +307,148 @@
           </ul>
         </div>
 
-        <button onclick="switchRole('student')" class="w-full py-3.5 mt-1 rounded-2xl cta-btn-gradient text-stone-950 font-black text-xs tracking-wider active:scale-95 transition-all shadow-md">
+        <button onclick="filterTeacherAndBook('Ariel')" class="w-full py-3.5 mt-1 rounded-2xl cta-btn-gradient text-stone-950 font-black text-xs tracking-wider active:scale-95 transition-all shadow-md">
           預約 Ariel Kuo 老師課程時段
         </button>
       </div>
-    </section>
 
-    <!-- 視圖 4：老師專區 (含開課、統計與刪除課程) -->
-    <section id="view-teacher" class="hidden space-y-4">
-      <div id="teacher-login-box" class="glass-card p-6 rounded-3xl text-center">
-        <div class="w-12 h-12 bg-stone-900 border border-stone-800 text-[#d8a46f] rounded-full flex items-center justify-center mx-auto mb-3 text-lg font-bold shadow-inner">🔐</div>
-        <h3 class="font-bold text-sm text-stone-100 tracking-wide">老師身分驗證</h3>
-        <p class="text-[11px] text-stone-400 mt-1 mb-4">請輸入管理密碼以維護排課與查看時數統計</p>
-        <div class="space-y-3">
-          <input type="password" id="teacher-pwd" placeholder="請輸入管理密碼" class="w-full text-xs px-3.5 py-2.5 rounded-xl glass-input text-stone-100 text-center outline-none">
-          <button onclick="handleTeacherLogin()" id="teacher-login-btn" class="w-full cta-btn-gradient text-stone-950 font-bold text-xs py-3 rounded-xl shadow active:scale-95 transition-all">
-            登入管理後台
-          </button>
+      <!-- 其他已審核通過的合作老師動態卡片清單 -->
+      <div id="approved-teachers-list" class="space-y-4"></div>
+
+      <!-- 專業顧問團隊固定卡片 -->
+      <div class="glass-card p-5 rounded-3xl space-y-3">
+        <div class="flex items-center gap-3.5">
+          <div class="w-12 h-12 rounded-2xl p-[1px] bg-gradient-to-tr from-stone-600 to-stone-800 shrink-0 shadow-lg flex items-center justify-center text-xl bg-stone-950">
+            🩺
+          </div>
+          <div>
+            <h3 class="font-bold text-sm text-stone-100">物理治療與營養顧問團隊</h3>
+            <p class="text-[11px] text-stone-400 mt-0.5">運動傷害防護 ｜ 動作評估 ｜ 菜單規劃</p>
+          </div>
+        </div>
+        <div class="space-y-1 text-xs text-stone-300 font-light border-t border-stone-800/80 pt-2.5">
+          <p class="flex items-center gap-2"><span class="text-[#d8a46f]">●</span> 國家高考物理治療師動作力學精準評估</p>
+          <p class="flex items-center gap-2"><span class="text-[#d8a46f]">●</span> 專屬增肌減脂、機能營養規劃與放鬆指導</p>
         </div>
       </div>
+    </section>
 
+    <!-- 視圖 4：老師專區 (含管理者後台與老師登入) -->
+    <section id="view-teacher" class="hidden space-y-4">
+      
+      <!-- 登入與註冊選項卡 -->
+      <div id="teacher-auth-box" class="glass-card p-5 rounded-3xl text-center space-y-3">
+        <div class="flex justify-center gap-1.5 p-1 bg-stone-950/80 rounded-2xl border border-stone-800/80">
+          <button id="tab-btn-admin" onclick="switchAuthTab('admin')" class="flex-1 py-1.5 rounded-xl font-bold text-xs cta-btn-gradient text-stone-950 transition-all">
+            👑 管理者登入
+          </button>
+          <button id="tab-btn-teacher" onclick="switchAuthTab('teacher')" class="flex-1 py-1.5 rounded-xl font-bold text-xs text-stone-400 hover:text-stone-200 transition-all">
+            老師登入
+          </button>
+          <button id="tab-btn-register" onclick="switchAuthTab('register')" class="flex-1 py-1.5 rounded-xl font-bold text-xs text-stone-400 hover:text-stone-200 transition-all">
+            申請加入
+          </button>
+        </div>
+
+        <!-- 1. 管理者登入 -->
+        <div id="auth-form-admin" class="space-y-3 pt-2">
+          <div class="w-12 h-12 bg-stone-900 border border-stone-800 text-[#d8a46f] rounded-full flex items-center justify-center mx-auto text-lg font-bold shadow-inner">👑</div>
+          <h3 class="font-bold text-sm text-stone-100 tracking-wide">管理者後台</h3>
+          <p class="text-[11px] text-stone-400">請輸入管理者密碼進入審核與課表中心</p>
+          <input type="password" id="admin-login-pwd" placeholder="請輸入管理者密碼" class="w-full text-xs px-3.5 py-2.5 rounded-xl glass-input text-stone-100 text-center outline-none">
+          <button onclick="handleAdminLogin()" id="admin-login-btn" class="w-full cta-btn-gradient text-stone-950 font-bold text-xs py-3 rounded-xl shadow active:scale-95 transition-all">
+            進入管理者審核後台
+          </button>
+        </div>
+
+        <!-- 2. 一般老師登入 -->
+        <div id="auth-form-teacher" class="hidden space-y-3 pt-2">
+          <div class="w-12 h-12 bg-stone-900 border border-stone-800 text-[#d8a46f] rounded-full flex items-center justify-center mx-auto text-lg font-bold shadow-inner">🔐</div>
+          <h3 class="font-bold text-sm text-stone-100 tracking-wide">老師後台登入</h3>
+          <p class="text-[11px] text-stone-400">請輸入您的姓名/Email 與專屬密碼</p>
+          <input type="text" id="teacher-login-acc" placeholder="老師姓名 或 Email" class="w-full text-xs px-3.5 py-2.5 rounded-xl glass-input text-stone-100 outline-none">
+          <input type="password" id="teacher-login-pwd" placeholder="登入密碼" class="w-full text-xs px-3.5 py-2.5 rounded-xl glass-input text-stone-100 outline-none">
+          <button onclick="handleTeacherLogin()" id="teacher-login-btn" class="w-full cta-btn-gradient text-stone-950 font-bold text-xs py-3 rounded-xl shadow active:scale-95 transition-all">
+            登入老師後台
+          </button>
+        </div>
+
+        <!-- 3. 新老師註冊申請 -->
+        <form id="auth-form-register" onsubmit="handleTeacherRegister(event)" class="hidden space-y-2.5 text-left text-xs pt-2">
+          <div class="text-center mb-2">
+            <h3 class="font-bold text-sm text-stone-100">申請加入 MY Growth 師資</h3>
+            <p class="text-[11px] text-stone-400">送出後將由管理者進行資格審核確認</p>
+          </div>
+          <div>
+            <label class="text-stone-400">老師姓名 <span class="text-rose-400">*</span></label>
+            <input type="text" id="reg-name" required placeholder="例如：Leo 教練" class="w-full mt-1 p-2 rounded-xl glass-input text-stone-100 outline-none">
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="text-stone-400">管理密碼 <span class="text-rose-400">*</span></label>
+              <input type="password" id="reg-pwd" required placeholder="設定登入密碼" class="w-full mt-1 p-2 rounded-xl glass-input text-stone-100 outline-none">
+            </div>
+            <div>
+              <label class="text-stone-400">稱謂/職稱 <span class="text-rose-400">*</span></label>
+              <input type="text" id="reg-title" required placeholder="例如：體能教練 / 瑜珈導師" class="w-full mt-1 p-2 rounded-xl glass-input text-stone-100 outline-none">
+            </div>
+          </div>
+          <div>
+            <label class="text-stone-400">通知信箱 (接收預約通知) <span class="text-rose-400">*</span></label>
+            <input type="email" id="reg-email" required placeholder="your-email@gmail.com" class="w-full mt-1 p-2 rounded-xl glass-input text-stone-100 outline-none">
+          </div>
+          <div>
+            <label class="text-stone-400">專長領域簡述 <span class="text-rose-400">*</span></label>
+            <input type="text" id="reg-bio" required placeholder="例如：肌力體能 ｜ 增肌減脂 ｜ 拳擊" class="w-full mt-1 p-2 rounded-xl glass-input text-stone-100 outline-none">
+          </div>
+          <div>
+            <label class="text-stone-400">個人經歷 (每行一項)</label>
+            <textarea id="reg-exp" rows="2" placeholder="例如：2023 全國健美新秀第一名" class="w-full mt-1 p-2 rounded-xl glass-input text-stone-100 outline-none"></textarea>
+          </div>
+          <div>
+            <label class="text-stone-400">專業證照 (每行一項)</label>
+            <textarea id="reg-certs" rows="2" placeholder="例如：ACE-CPT 國際教練證照" class="w-full mt-1 p-2 rounded-xl glass-input text-stone-100 outline-none"></textarea>
+          </div>
+          <button type="submit" id="reg-submit-btn" class="w-full mt-2 cta-btn-gradient text-stone-950 font-bold py-3 rounded-xl shadow active:scale-95 transition-all">
+            送出審核申請 (由管理者審核)
+          </button>
+        </form>
+      </div>
+
+      <!-- 後台管理面板 (Ariel 或 一般老師登入後) -->
       <div id="teacher-panel" class="hidden space-y-4">
         
+        <!-- 當前登入資訊卡 -->
+        <div class="glass-card p-4 rounded-3xl flex justify-between items-center border border-[#d8a46f]/30">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-stone-900 border border-[#d8a46f]/40 flex items-center justify-center font-bold text-sm text-[#d8a46f]">
+              <span id="current-user-avatar">👑</span>
+            </div>
+            <div>
+              <div class="flex items-center gap-1.5">
+                <h3 id="current-user-name" class="font-bold text-sm text-stone-100">Ariel Kuo</h3>
+                <span id="current-user-badge" class="text-[9px] bg-[#d8a46f]/20 text-[#d8a46f] px-2 py-0.5 rounded-full font-semibold">管理者</span>
+              </div>
+              <p id="current-user-sub" class="text-[10px] text-stone-400 mt-0.5">MY Growth 管理中心</p>
+            </div>
+          </div>
+          <button onclick="handleLogout()" class="text-xs text-rose-400 hover:underline px-2.5 py-1 bg-stone-950/60 rounded-xl border border-stone-800">
+            登出
+          </button>
+        </div>
+
+        <!-- 👑 Ariel 管理者審核中心 (僅管理者可見) -->
+        <div id="admin-review-section" class="hidden glass-card p-4 rounded-3xl border border-amber-500/40 shadow-xl space-y-3">
+          <div class="flex justify-between items-center pb-2 border-b border-stone-800">
+            <div class="flex items-center gap-2">
+              <span class="text-base">👑</span>
+              <span class="text-xs font-bold text-[#d8a46f]">師資審核控制中心</span>
+            </div>
+            <span id="pending-count-badge" class="text-[10px] bg-amber-950 text-amber-300 border border-amber-800 px-2 py-0.5 rounded-full font-bold">0 位待審核</span>
+          </div>
+          <div id="pending-teachers-list" class="space-y-3"></div>
+        </div>
+
         <!-- 該月教課時數與學員統計卡片 -->
         <div class="glass-card p-4 rounded-3xl border border-[#d8a46f]/30 shadow-lg">
           <div class="flex justify-between items-center mb-3">
@@ -336,7 +483,7 @@
         <!-- 新增排課表單 -->
         <div class="glass-card p-4 rounded-3xl">
           <h3 class="font-bold text-xs text-stone-200 mb-3 flex items-center gap-1.5">
-            <span>➕</span> 新增開放預約時段
+            <span>➕</span> 排定開放時段
           </h3>
           <form onsubmit="handleCreateCourse(event)" class="space-y-2.5 text-xs">
             <div class="grid grid-cols-2 gap-2">
@@ -351,12 +498,12 @@
             </div>
             <div>
               <label class="text-stone-400">課程名稱 <span class="text-rose-400">*</span></label>
-              <input type="text" id="new-course-name" placeholder="例如 Ariel 體能專項 / 舉重指導 / HYROX" required class="w-full mt-1 p-2 rounded-xl glass-input text-stone-200 outline-none">
+              <input type="text" id="new-course-name" placeholder="例如：體能專項 / 舉重指導 / HYROX" required class="w-full mt-1 p-2 rounded-xl glass-input text-stone-200 outline-none">
             </div>
             <div class="grid grid-cols-2 gap-2">
               <div>
                 <label class="text-stone-400">授課老師姓名 <span class="text-rose-400">*</span></label>
-                <input type="text" id="new-course-teacher" placeholder="Ariel Kuo 老師" required class="w-full mt-1 p-2 rounded-xl glass-input text-stone-200 outline-none">
+                <input type="text" id="new-course-teacher" placeholder="Ariel Kuo" required class="w-full mt-1 p-2 rounded-xl glass-input text-stone-200 outline-none">
               </div>
               <div>
                 <label class="text-stone-400">名額上限 <span class="text-rose-400">*</span></label>
@@ -364,7 +511,7 @@
               </div>
             </div>
             <div>
-              <label class="text-stone-400">老師通知 Gmail <span class="text-rose-400">*</span></label>
+              <label class="text-stone-400">老師通知 Email <span class="text-rose-400">*</span></label>
               <input type="email" id="new-course-teacher-email" placeholder="your-email@gmail.com" required class="w-full mt-1 p-2 rounded-xl glass-input text-stone-200 outline-none">
             </div>
             <button type="submit" id="create-course-btn" class="w-full mt-2 cta-btn-gradient text-stone-950 font-bold py-2.5 rounded-xl active:scale-95 shadow transition-all">
@@ -373,11 +520,10 @@
           </form>
         </div>
 
-        <!-- 課程管理列表 -->
+        <!-- 課程管理列表 (開關狀態與刪除) -->
         <div class="glass-card p-4 rounded-3xl">
           <div class="flex justify-between items-center mb-3">
-            <h3 class="font-bold text-xs text-stone-200">該月課程排課與狀態</h3>
-            <button onclick="handleTeacherLogout()" class="text-[11px] text-rose-400 hover:underline">登出</button>
+            <h3 class="font-bold text-xs text-stone-200">排程與預約管理</h3>
           </div>
           <div id="teacher-course-list" class="space-y-2.5 max-h-80 overflow-y-auto"></div>
         </div>
@@ -450,12 +596,17 @@
   </div>
 
   <script>
-    const API_URL = 'https://script.google.com/macros/s/AKfycbw4wbFdbtyE0Ais4wJHP8o5KIUYPZEgiQ_q2qR2e6gupwDE5f_srsLY-97AE_vPPHRm/exec';
+    // 已更新為最新的 Google Apps Script 授權 URL
+    const API_URL = 'https://script.google.com/macros/s/AKfycbxDXvP4B-HI4dVpKwBPss1kkGxRO1X0IycmC1KhFJthypb3fNaWLEsPocX5_jFYrBvZ/exec';
 
     let courses = [];
     let bookings = [];
+    let teachers = [];
+
+    let selectedFilterTeacher = null;
+    let currentUser = null;
+
     const today = new Date();
-    
     let viewYear = today.getFullYear();
     let viewMonth = today.getMonth();
     let selectedDate = `${viewYear}-${String(viewMonth + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
@@ -466,8 +617,6 @@
     let currentSearchPhone = '';
     let searchFilterYear = null;
     let searchFilterMonth = null;
-
-    let isTeacherLoggedIn = false;
 
     function formatDate(y, m, d) {
       return `${y}-${String(m + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
@@ -495,11 +644,17 @@
         const data = await res.json();
         courses = data.courses || [];
         bookings = data.bookings || [];
+        teachers = data.teachers || [];
         statusEl.innerText = '● 雲端即時同步';
+
+        renderApprovedTeachers();
         renderCalendar();
-        if (isTeacherLoggedIn) {
+        if (currentUser) {
           renderTeacherCourses();
           renderTeacherStats();
+          if (currentUser.isAdmin) {
+            renderAdminReviewCenter();
+          }
         }
         if (currentSearchPhone) {
           renderSearchResults();
@@ -507,6 +662,76 @@
       } catch (err) {
         statusEl.innerText = '離線中';
       }
+    }
+
+    function renderApprovedTeachers() {
+      const container = document.getElementById('approved-teachers-list');
+      if (!container) return;
+
+      const approvedOthers = teachers.filter(t => t.status === 'approved' && !t.name.includes('Ariel'));
+
+      if (approvedOthers.length === 0) {
+        container.innerHTML = '';
+        return;
+      }
+
+      container.innerHTML = approvedOthers.map(t => {
+        const expList = t.exp ? t.exp.split('\n').filter(Boolean) : [];
+        const certList = t.certs ? t.certs.split('\n').filter(Boolean) : [];
+
+        return `
+          <div class="glass-card p-5 rounded-3xl space-y-4 border border-[#d8a46f]/35 shadow-xl">
+            <div class="flex items-center gap-4">
+              <div class="w-16 h-16 rounded-full p-[2px] bg-gradient-to-tr from-[#d8a46f] via-amber-200 to-stone-800 shrink-0 shadow-xl overflow-hidden flex items-center justify-center bg-stone-900 text-xl font-bold text-[#d8a46f]">
+                ${t.name.charAt(0)}
+              </div>
+              <div>
+                <div class="flex items-center gap-2">
+                  <h3 class="font-bold text-lg text-stone-100 font-serif-title tracking-wider">${t.name}</h3>
+                  <span class="text-[10px] bg-[#d8a46f]/20 text-[#d8a46f] border border-[#d8a46f]/40 px-2 py-0.5 rounded-full font-bold">${t.title || '合作教練'}</span>
+                </div>
+                <p class="text-xs text-stone-300 mt-0.5 font-medium">${t.bio || '專業健身與體能指導'}</p>
+              </div>
+            </div>
+
+            ${expList.length > 0 ? `
+              <div class="bg-stone-950/70 p-3 rounded-2xl border border-stone-800/80 space-y-1.5">
+                <div class="flex items-center gap-1 text-xs font-bold text-[#d8a46f]"><span>🏆</span> 經歷</div>
+                <ul class="text-[11px] text-stone-300 space-y-0.5 pl-1 leading-relaxed">
+                  ${expList.map(item => `<li class="flex items-start gap-1.5"><span class="text-[#d8a46f]">•</span> ${item}</li>`).join('')}
+                </ul>
+              </div>
+            ` : ''}
+
+            ${certList.length > 0 ? `
+              <div class="bg-stone-950/70 p-3 rounded-2xl border border-stone-800/80 space-y-1.5">
+                <div class="flex items-center gap-1 text-xs font-bold text-emerald-400"><span>📜</span> 證照</div>
+                <ul class="text-[11px] text-stone-300 space-y-0.5 pl-1 leading-relaxed">
+                  ${certList.map(item => `<li class="flex items-start gap-1.5"><span class="text-emerald-400">•</span> ${item}</li>`).join('')}
+                </ul>
+              </div>
+            ` : ''}
+
+            <button onclick="filterTeacherAndBook('${t.name}')" class="w-full py-3 mt-1 rounded-2xl cta-btn-gradient text-stone-950 font-black text-xs tracking-wider active:scale-95 transition-all shadow-md">
+              預約 ${t.name} 老師課程時段
+            </button>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function filterTeacherAndBook(teacherName) {
+      selectedFilterTeacher = teacherName;
+      document.getElementById('teacher-filter-banner').classList.remove('hidden');
+      document.getElementById('filter-teacher-name').innerText = teacherName;
+      switchRole('student');
+      renderCalendar();
+    }
+
+    function clearTeacherFilter() {
+      selectedFilterTeacher = null;
+      document.getElementById('teacher-filter-banner').classList.add('hidden');
+      renderCalendar();
     }
 
     function renderCalendar() {
@@ -521,9 +746,13 @@
         grid.appendChild(document.createElement('div'));
       }
 
+      const activeCourses = selectedFilterTeacher 
+        ? courses.filter(c => c.teacher.includes(selectedFilterTeacher))
+        : courses;
+
       for (let day = 1; day <= totalDays; day++) {
         const dateStr = formatDate(viewYear, viewMonth, day);
-        const hasOpenCourse = courses.some(c => c.date === dateStr && c.isOpen && c.booked < c.max);
+        const hasOpenCourse = activeCourses.some(c => c.date === dateStr && c.isOpen && c.booked < c.max);
         const isSelected = selectedDate === dateStr;
 
         const btn = document.createElement('button');
@@ -553,11 +782,15 @@
       const badge = document.getElementById('daily-count-badge');
       document.getElementById('selected-date-title').innerText = `📅 ${selectedDate} 課表`;
 
-      const list = courses.filter(c => c.date === selectedDate && c.isOpen);
+      let list = courses.filter(c => c.date === selectedDate && c.isOpen);
+      if (selectedFilterTeacher) {
+        list = list.filter(c => c.teacher.includes(selectedFilterTeacher));
+      }
+
       badge.innerText = `${list.length} 堂可選`;
 
       if (list.length === 0) {
-        container.innerHTML = `<div class="glass-card p-6 rounded-2xl text-center text-stone-500 text-xs">本日無開放預約時段</div>`;
+        container.innerHTML = `<div class="glass-card p-6 rounded-2xl text-center text-stone-500 text-xs">本日無開放預約時段 ${selectedFilterTeacher ? `(${selectedFilterTeacher})` : ''}</div>`;
         return;
       }
 
@@ -569,7 +802,7 @@
             <div>
               <span class="text-[10px] font-bold text-[#d8a46f] bg-[#d8a46f]/10 border border-[#d8a46f]/30 px-2.5 py-0.5 rounded-full">🕒 ${c.time}</span>
               <h4 class="font-bold text-sm text-stone-100 mt-1.5">${c.name}</h4>
-              <p class="text-xs text-stone-400 mt-0.5">${c.teacher}</p>
+              <p class="text-xs text-stone-400 mt-0.5">授課老師：${c.teacher}</p>
               <p class="text-[11px] font-semibold mt-1 ${isFull ? 'text-rose-400' : 'text-emerald-400'}">
                 ${isFull ? '● 已額滿' : `● 剩餘名額: ${remain} 位`}
               </p>
@@ -612,7 +845,7 @@
 
       const submitBtn = document.getElementById('modal-submit-btn');
       submitBtn.disabled = true;
-      submitBtn.innerText = '同步加入 Google 日曆與發信中...';
+      submitBtn.innerText = '處理中...';
 
       try {
         const res = await fetch(API_URL, {
@@ -628,7 +861,7 @@
 
         await fetchData();
         closeModal();
-        alert(`🎉 預約成功！\n確認信已傳遞至 ${userEmail}，且已同步自動加入 Google 行事曆！`);
+        alert(`🎉 預約成功！\n確認信已傳遞至 ${userEmail}！`);
         document.getElementById('user-name').value = '';
         document.getElementById('user-email').value = '';
         document.getElementById('user-phone').value = '';
@@ -640,7 +873,6 @@
       }
     }
 
-    // 學員預約查詢與月份篩選
     function handleSearchMyBookings() {
       const phoneInput = document.getElementById('search-phone-input').value.trim();
       if (!phoneInput || !/^09\d{8}$/.test(phoneInput)) {
@@ -722,9 +954,8 @@
       `).join('');
     }
 
-    // 學員取消預約
     async function cancelMyBooking(bookingId) {
-      if (!confirm('確定要取消此堂預約嗎？名額將會立即釋出供他人預約。')) return;
+      if (!confirm('確定要取消此堂預約嗎？名額將會立即釋出。')) return;
 
       try {
         const res = await fetch(API_URL, {
@@ -736,10 +967,227 @@
           alert('✅ 已成功取消預約！');
           await fetchData();
         } else {
-          alert('取消失敗：' + (result.message || '伺服器錯誤'));
+          alert('取消失敗');
         }
       } catch (err) {
         alert('連線失敗，請檢查網路！');
+      }
+    }
+
+    function switchAuthTab(tab) {
+      const btnAdmin = document.getElementById('tab-btn-admin');
+      const btnTeacher = document.getElementById('tab-btn-teacher');
+      const btnReg = document.getElementById('tab-btn-register');
+      const fAdmin = document.getElementById('auth-form-admin');
+      const fTeacher = document.getElementById('auth-form-teacher');
+      const fReg = document.getElementById('auth-form-register');
+
+      [btnAdmin, btnTeacher, btnReg].forEach(b => b.className = 'flex-1 py-1.5 rounded-xl font-bold text-xs text-stone-400 hover:text-stone-200 transition-all');
+      [fAdmin, fTeacher, fReg].forEach(f => f.classList.add('hidden'));
+
+      if (tab === 'admin') {
+        btnAdmin.className = 'flex-1 py-1.5 rounded-xl font-bold text-xs cta-btn-gradient text-stone-950 transition-all';
+        fAdmin.classList.remove('hidden');
+      } else if (tab === 'teacher') {
+        btnTeacher.className = 'flex-1 py-1.5 rounded-xl font-bold text-xs cta-btn-gradient text-stone-950 transition-all';
+        fTeacher.classList.remove('hidden');
+      } else {
+        btnReg.className = 'flex-1 py-1.5 rounded-xl font-bold text-xs cta-btn-gradient text-stone-950 transition-all';
+        fReg.classList.remove('hidden');
+      }
+    }
+
+    async function handleAdminLogin() {
+      const pwdInput = document.getElementById('admin-login-pwd');
+      const pwd = pwdInput.value.trim();
+      const btn = document.getElementById('admin-login-btn');
+
+      if (!pwd) {
+        alert('請輸入管理者密碼！');
+        return;
+      }
+
+      btn.disabled = true;
+      btn.innerText = '驗證中...';
+
+      try {
+        const res = await fetch(API_URL, {
+          method: 'POST',
+          body: JSON.stringify({ action: 'ADMIN_LOGIN', password: pwd })
+        });
+        const data = await res.json();
+        if (data.success) {
+          currentUser = { isAdmin: true, name: 'Ariel Kuo ' };
+          showDashboard();
+        } else {
+          alert('管理者密碼錯誤！');
+        }
+      } catch (err) {
+        alert('伺服器連線失敗');
+      } finally {
+        btn.disabled = false;
+        btn.innerText = '進入管理者審核後台';
+      }
+    }
+
+    async function handleTeacherLogin() {
+      const acc = document.getElementById('teacher-login-acc').value.trim();
+      const pwd = document.getElementById('teacher-login-pwd').value.trim();
+      const btn = document.getElementById('teacher-login-btn');
+
+      if (!acc || !pwd) {
+        alert('請輸入帳號與密碼！');
+        return;
+      }
+
+      btn.disabled = true;
+      btn.innerText = '登入驗證中...';
+
+      try {
+        const res = await fetch(API_URL, {
+          method: 'POST',
+          body: JSON.stringify({ action: 'TEACHER_LOGIN', account: acc, password: pwd })
+        });
+        const data = await res.json();
+        if (data.success) {
+          currentUser = data.teacher;
+          showDashboard();
+        } else {
+          alert('登入失敗：\n' + (data.message || '帳號或密碼錯誤'));
+        }
+      } catch (err) {
+        alert('伺服器連線失敗');
+      } finally {
+        btn.disabled = false;
+        btn.innerText = '登入老師後台';
+      }
+    }
+
+    async function handleTeacherRegister(e) {
+      e.preventDefault();
+      const btn = document.getElementById('reg-submit-btn');
+      btn.disabled = true;
+      btn.innerText = '送出申請中...';
+
+      const payload = {
+        action: 'TEACHER_REGISTER',
+        name: document.getElementById('reg-name').value.trim(),
+        password: document.getElementById('reg-pwd').value.trim(),
+        title: document.getElementById('reg-title').value.trim(),
+        email: document.getElementById('reg-email').value.trim(),
+        bio: document.getElementById('reg-bio').value.trim(),
+        exp: document.getElementById('reg-exp').value.trim(),
+        certs: document.getElementById('reg-certs').value.trim()
+      };
+
+      try {
+        const res = await fetch(API_URL, {
+          method: 'POST',
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        if (data.success) {
+          alert(data.message || '🎉 申請已送出！請等待管理者審核通過。');
+          e.target.reset();
+          switchAuthTab('teacher');
+          await fetchData();
+        } else {
+          alert('註冊失敗：' + (data.message || '請檢查輸入內容'));
+        }
+      } catch (err) {
+        alert('註冊失敗，請檢查網路！');
+      } finally {
+        btn.disabled = false;
+        btn.innerText = '送出審核申請 (由管理者審核)';
+      }
+    }
+
+    function showDashboard() {
+      document.getElementById('teacher-auth-box').classList.add('hidden');
+      document.getElementById('teacher-panel').classList.remove('hidden');
+
+      if (currentUser.isAdmin) {
+        document.getElementById('current-user-avatar').innerText = '👑';
+        document.getElementById('current-user-name').innerText = 'Ariel Kuo';
+        document.getElementById('new-course-teacher').value = 'Ariel Kuo';
+        document.getElementById('admin-review-section').classList.remove('hidden');
+        renderAdminReviewCenter();
+      } else {
+        document.getElementById('current-user-avatar').innerText = currentUser.name.charAt(0);
+        document.getElementById('current-user-name').innerText = currentUser.name;
+        document.getElementById('current-user-badge').innerText = currentUser.title || '專業教練';
+        document.getElementById('new-course-teacher').value = currentUser.name;
+        document.getElementById('new-course-teacher-email').value = currentUser.email || '';
+        document.getElementById('admin-review-section').classList.add('hidden');
+      }
+
+      renderTeacherCourses();
+      renderTeacherStats();
+    }
+
+    function handleLogout() {
+      currentUser = null;
+      document.getElementById('teacher-auth-box').classList.remove('hidden');
+      document.getElementById('teacher-panel').classList.add('hidden');
+      document.getElementById('admin-review-section').classList.add('hidden');
+      document.getElementById('admin-login-pwd').value = '';
+      document.getElementById('teacher-login-pwd').value = '';
+    }
+
+    function renderAdminReviewCenter() {
+      const badge = document.getElementById('pending-count-badge');
+      const container = document.getElementById('pending-teachers-list');
+
+      const pendingList = teachers.filter(t => t.status === 'pending');
+      badge.innerText = `${pendingList.length} 位待審核`;
+
+      if (pendingList.length === 0) {
+        container.innerHTML = `<div class="text-stone-500 text-xs text-center py-2">目前無待審核師資。</div>`;
+        return;
+      }
+
+      container.innerHTML = pendingList.map(t => `
+        <div class="bg-stone-950/80 p-3.5 rounded-2xl border border-stone-800 space-y-2 text-xs">
+          <div class="flex justify-between items-start">
+            <div>
+              <span class="font-bold text-stone-100 text-sm">${t.name}</span>
+              <span class="text-[10px] text-[#d8a46f] ml-1">(${t.title})</span>
+              <p class="text-[11px] text-stone-400 mt-0.5">信箱：${t.email}</p>
+            </div>
+            <span class="text-[10px] bg-amber-950/90 text-amber-400 border border-amber-800/80 px-2 py-0.5 rounded-full font-bold">待確認</span>
+          </div>
+          <p class="text-stone-300 text-[11px]"><b>專長：</b>${t.bio}</p>
+          ${t.exp ? `<p class="text-stone-400 text-[10px]"><b>經歷：</b>${t.exp.replace(/\n/g, ' ｜ ')}</p>` : ''}
+          ${t.certs ? `<p class="text-stone-400 text-[10px]"><b>證照：</b>${t.certs.replace(/\n/g, ' ｜ ')}</p>` : ''}
+          <div class="grid grid-cols-2 gap-2 pt-1 border-t border-stone-800">
+            <button onclick="handleReviewTeacher('${t.id}', true)" class="py-2 rounded-xl font-bold bg-emerald-700 hover:bg-emerald-600 text-white text-xs active:scale-95 shadow transition-all">
+              ✅ 通過並上架
+            </button>
+            <button onclick="handleReviewTeacher('${t.id}', false)" class="py-2 rounded-xl font-bold bg-rose-900/80 hover:bg-rose-800 text-stone-200 text-xs active:scale-95 transition-all">
+              ❌ 駁回申請
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    async function handleReviewTeacher(teacherId, approve) {
+      if (!confirm(`確定要${approve ? '【通過並上架】' : '【駁回】'}此位老師的申請嗎？`)) return;
+
+      try {
+        const res = await fetch(API_URL, {
+          method: 'POST',
+          body: JSON.stringify({ action: 'REVIEW_TEACHER', teacherId, approve })
+        });
+        const data = await res.json();
+        if (data.success) {
+          alert(`✅ 已成功${approve ? '審核通過並上架師資！' : '駁回此申請！'}`);
+          await fetchData();
+        } else {
+          alert('審核失敗：' + data.message);
+        }
+      } catch (err) {
+        alert('網路連線失敗');
       }
     }
 
@@ -752,10 +1200,14 @@
     }
 
     function renderTeacherStats() {
+      if (!currentUser) return;
       document.getElementById('stats-month-label').innerText = `${statsYear}年 ${statsMonth + 1}月`;
       
       const monthPrefix = `${statsYear}-${String(statsMonth + 1).padStart(2, '0')}`;
-      const monthlyCourses = courses.filter(c => c.date.startsWith(monthPrefix));
+      
+      const monthlyCourses = currentUser.isAdmin
+        ? courses.filter(c => c.date.startsWith(monthPrefix))
+        : courses.filter(c => c.date.startsWith(monthPrefix) && c.teacher === currentUser.name);
 
       let totalHours = 0;
       let totalStudents = 0;
@@ -771,52 +1223,20 @@
       document.getElementById('stat-total-students').innerHTML = `${totalStudents} <span class="text-[10px] font-normal text-stone-400">人次</span>`;
     }
 
-    async function handleTeacherLogin() {
-      const pwd = document.getElementById('teacher-pwd').value;
-      const btn = document.getElementById('teacher-login-btn');
-      btn.disabled = true;
-      btn.innerText = '驗證中...';
-
-      try {
-        const res = await fetch(API_URL, {
-          method: 'POST',
-          body: JSON.stringify({ action: 'TEACHER_LOGIN', password: pwd })
-        });
-        const data = await res.json();
-        if (data.success) {
-          isTeacherLoggedIn = true;
-          document.getElementById('teacher-login-box').classList.add('hidden');
-          document.getElementById('teacher-panel').classList.remove('hidden');
-          renderTeacherCourses();
-          renderTeacherStats();
-        } else {
-          alert('密碼錯誤！');
-        }
-      } catch (err) {
-        alert('伺服器連線失敗');
-      } finally {
-        btn.disabled = false;
-        btn.innerText = '登入管理後台';
-      }
-    }
-
-    function handleTeacherLogout() {
-      isTeacherLoggedIn = false;
-      document.getElementById('teacher-login-box').classList.remove('hidden');
-      document.getElementById('teacher-panel').classList.add('hidden');
-      document.getElementById('teacher-pwd').value = '';
-    }
-
-    // 老師課程清單 (開關狀態 + 刪除按鈕)
     function renderTeacherCourses() {
+      if (!currentUser) return;
       const list = document.getElementById('teacher-course-list');
       const monthPrefix = `${statsYear}-${String(statsMonth + 1).padStart(2, '0')}`;
-      const monthlyCourses = courses.filter(c => c.date.startsWith(monthPrefix));
+      
+      const monthlyCourses = currentUser.isAdmin
+        ? courses.filter(c => c.date.startsWith(monthPrefix))
+        : courses.filter(c => c.date.startsWith(monthPrefix) && c.teacher === currentUser.name);
 
       if (monthlyCourses.length === 0) {
         list.innerHTML = `<div class="text-stone-500 text-center py-4 text-xs">${statsYear}年 ${statsMonth + 1}月 尚無排定課程</div>`;
         return;
       }
+
       list.innerHTML = monthlyCourses.map(c => `
         <div class="p-3 rounded-2xl border border-stone-800/80 bg-stone-950/60 flex justify-between items-center text-xs">
           <div>
@@ -849,7 +1269,6 @@
       }
     }
 
-    // 老師刪除課程
     async function deleteCourse(courseId) {
       if (!confirm('確定要刪除此堂課程時段嗎？刪除後無法恢復。')) return;
 
@@ -871,25 +1290,30 @@
 
     async function handleCreateCourse(e) {
       e.preventDefault();
+      if (!currentUser) return;
+
       const createBtn = document.getElementById('create-course-btn');
       createBtn.disabled = true;
       createBtn.innerText = '發布中...';
 
-      const date = document.getElementById('new-course-date').value;
-      const time = document.getElementById('new-course-time').value;
-      const name = document.getElementById('new-course-name').value;
-      const teacher = document.getElementById('new-course-teacher').value;
-      const max = document.getElementById('new-course-max').value;
-      const teacherEmail = document.getElementById('new-course-teacher-email').value;
+      const payload = {
+        action: 'CREATE_COURSE',
+        date: document.getElementById('new-course-date').value,
+        time: document.getElementById('new-course-time').value,
+        name: document.getElementById('new-course-name').value,
+        teacher: document.getElementById('new-course-teacher').value,
+        max: document.getElementById('new-course-max').value,
+        teacherEmail: document.getElementById('new-course-teacher-email').value
+      };
 
       try {
         await fetch(API_URL, {
           method: 'POST',
-          body: JSON.stringify({ action: 'CREATE_COURSE', date, time, name, teacher, max, teacherEmail })
+          body: JSON.stringify(payload)
         });
         await fetchData();
         e.target.reset();
-        alert('✅ 課程時段已成功上架！');
+        alert('✅ 課程時段已成功發布上架！');
       } catch (err) {
         alert('課程發布失敗');
       } finally {
@@ -943,7 +1367,7 @@
           vStudent.classList.remove('hidden');
           nStudent.classList.replace('text-stone-400', 'text-[#d8a46f]');
           hTitle.innerText = '學員月曆預約';
-          hSub.innerText = '選擇日期快速查看時段';
+          hSub.innerText = selectedFilterTeacher ? `已篩選【${selectedFilterTeacher}】老師的課程` : '選擇日期快速查看時段';
         } else if (role === 'my-bookings') {
           vMyBookings.classList.remove('hidden');
           nMyBookings.classList.replace('text-stone-400', 'text-[#d8a46f]');
@@ -959,7 +1383,7 @@
           nTeacher.classList.replace('text-stone-400', 'text-[#d8a46f]');
           hTitle.innerText = '老師專區';
           hSub.innerText = '管理課表開放狀態與授課時數統計';
-          if (isTeacherLoggedIn) {
+          if (currentUser) {
             renderTeacherStats();
             renderTeacherCourses();
           }
