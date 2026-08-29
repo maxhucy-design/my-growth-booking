@@ -30,9 +30,6 @@
       background: linear-gradient(135deg, #fae2cc 0%, #e0ab77 40%, #c49156 100%);
       box-shadow: 0 10px 28px -6px rgba(224, 171, 119, 0.55), 0 0 16px rgba(224, 171, 119, 0.25);
     }
-    .gold-btn-gradient {
-      background: linear-gradient(135deg, #f5d09b 0%, #d8a46f 50%, #b37d46 100%);
-    }
     .glass-card {
       background: rgba(26, 23, 20, 0.8);
       backdrop-filter: blur(18px);
@@ -180,7 +177,7 @@
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
       </button>
       <div>
-        <h1 class="text-sm font-bold text-stone-100 tracking-wide" id="header-title">學員預約</h1>
+        <h1 class="text-sm font-bold text-stone-100 tracking-wide" id="header-title">學員月曆預約</h1>
         <p class="text-[10px] text-stone-400" id="header-subtitle">選擇日期快速查看時段</p>
       </div>
     </div>
@@ -190,7 +187,7 @@
   <!-- ==================== 主內容視圖區 ==================== -->
   <main id="sub-content" class="hidden flex-1 p-4 pb-24 overflow-y-auto relative z-10">
     
-    <!-- 視圖 1：學員預約 -->
+    <!-- 視圖 1：學員月曆預約 -->
     <section id="view-student" class="space-y-4">
       <div id="teacher-filter-banner" class="hidden glass-card p-2.5 rounded-2xl flex justify-between items-center border border-[#d8a46f]/30">
         <div class="flex items-center gap-2 text-xs">
@@ -221,15 +218,15 @@
       <div id="daily-courses-list" class="space-y-3"></div>
     </section>
 
-    <!-- 視圖 2：學員「我的預約查詢」專區 -->
+    <!-- 視圖 2：學員「我的預約查詢」專區 (含剩餘堂數卡片) -->
     <section id="view-my-bookings" class="hidden space-y-4">
       <div class="glass-card p-5 rounded-3xl text-center space-y-3">
         <div class="w-12 h-12 bg-stone-900 border border-stone-800 text-[#d8a46f] rounded-full flex items-center justify-center mx-auto text-xl shadow-inner">
           📋
         </div>
         <div>
-          <h3 class="font-bold text-sm text-stone-100">查詢我的預約紀錄</h3>
-          <p class="text-[11px] text-stone-400 mt-0.5">請輸入預約時留下的手機號碼</p>
+          <h3 class="font-bold text-sm text-stone-100">查詢我的預約與堂數紀錄</h3>
+          <p class="text-[11px] text-stone-400 mt-0.5">請輸入手機號碼查看預約及剩餘可用堂數</p>
         </div>
         <div class="flex gap-2">
           <input type="tel" id="search-phone-input" placeholder="請輸入 09 開頭手機號碼" maxlength="10" class="flex-1 text-xs px-3.5 py-2.5 rounded-xl glass-input text-stone-100 outline-none">
@@ -239,8 +236,37 @@
         </div>
       </div>
 
+      <!-- 學員個人會員剩餘堂數資產卡 (查詢後顯示) -->
+      <div id="student-hours-card" class="hidden glass-card p-4 rounded-3xl border border-[#d8a46f]/40 shadow-lg">
+        <div class="flex justify-between items-center pb-2.5 border-b border-stone-800">
+          <div class="flex items-center gap-2">
+            <span class="text-base">🪙</span>
+            <div>
+              <h4 id="sh-name" class="font-bold text-xs text-stone-100">學員姓名</h4>
+              <p id="sh-phone" class="text-[10px] text-stone-400"></p>
+            </div>
+          </div>
+          <span class="text-[10px] bg-emerald-950 text-emerald-300 border border-emerald-800 px-2 py-0.5 rounded-full font-bold">MY Growth 會員</span>
+        </div>
+
+        <div class="grid grid-cols-3 gap-2 text-center pt-3">
+          <div class="bg-stone-950/70 p-2 rounded-2xl border border-stone-800/80">
+            <p class="text-[10px] text-stone-400">總購買堂數</p>
+            <p id="sh-total" class="text-base font-bold text-stone-200 mt-0.5">0 <span class="text-[9px] font-normal text-stone-400">堂</span></p>
+          </div>
+          <div class="bg-stone-950/70 p-2 rounded-2xl border border-stone-800/80">
+            <p class="text-[10px] text-stone-400">已預約堂數</p>
+            <p id="sh-used" class="text-base font-bold text-stone-400 mt-0.5">0 <span class="text-[9px] font-normal text-stone-400">堂</span></p>
+          </div>
+          <div class="bg-stone-950/70 p-2 rounded-2xl border border-[#d8a46f]/40 bg-gradient-to-b from-[#d8a46f]/10 to-transparent">
+            <p class="text-[10px] text-[#d8a46f] font-bold">剩餘可用堂數</p>
+            <p id="sh-remain" class="text-lg font-black text-[#d8a46f] mt-0.5">0 <span class="text-[9px] font-normal text-stone-400">堂</span></p>
+          </div>
+        </div>
+      </div>
+
       <div id="my-bookings-month-filter" class="hidden glass-card p-3 rounded-2xl flex justify-between items-center">
-        <span class="text-xs font-bold text-stone-300">篩選月份</span>
+        <span class="text-xs font-bold text-stone-300">篩選預約月份</span>
         <div class="flex items-center gap-1.5 bg-stone-950/90 px-2.5 py-1 rounded-xl border border-stone-800">
           <button onclick="changeSearchMonth(-1)" class="text-stone-400 hover:text-[#d8a46f] px-1 text-xs transition-colors">◀</button>
           <span id="search-month-label" class="text-xs font-bold text-[#d8a46f] font-serif-title">全部紀錄</span>
@@ -251,7 +277,7 @@
 
       <div id="my-bookings-results" class="space-y-3">
         <div class="text-center py-8 text-stone-500 text-xs">
-          請在上方輸入手機號碼以查看您的預約紀錄
+          請在上方輸入手機號碼以查看您的預約紀錄與剩餘堂數
         </div>
       </div>
     </section>
@@ -336,10 +362,10 @@
       </div>
     </section>
 
-    <!-- 視圖 4：老師專區 (含管理者後台與老師登入) -->
+    <!-- 視圖 4：老師專區 (含管理者堂數儲值後台) -->
     <section id="view-teacher" class="hidden space-y-4">
       
-      <!-- 登入與註冊選項卡 -->
+      <!-- 登入選項卡 -->
       <div id="teacher-auth-box" class="glass-card p-5 rounded-3xl text-center space-y-3">
         <div class="flex justify-center gap-1.5 p-1 bg-stone-950/80 rounded-2xl border border-stone-800/80">
           <button id="tab-btn-admin" onclick="switchAuthTab('admin')" class="flex-1 py-1.5 rounded-xl font-bold text-xs cta-btn-gradient text-stone-950 transition-all">
@@ -357,14 +383,14 @@
         <div id="auth-form-admin" class="space-y-3 pt-2">
           <div class="w-12 h-12 bg-stone-900 border border-stone-800 text-[#d8a46f] rounded-full flex items-center justify-center mx-auto text-lg font-bold shadow-inner">👑</div>
           <h3 class="font-bold text-sm text-stone-100 tracking-wide">管理者後台</h3>
-          <p class="text-[11px] text-stone-400">請輸入管理者密碼進入審核與課表中心</p>
+          <p class="text-[11px] text-stone-400">請輸入管理者密碼進入審核與學員堂數中心</p>
           <input type="password" id="admin-login-pwd" placeholder="請輸入管理者密碼" class="w-full text-xs px-3.5 py-2.5 rounded-xl glass-input text-stone-100 text-center outline-none">
           <button onclick="handleAdminLogin()" id="admin-login-btn" class="w-full cta-btn-gradient text-stone-950 font-bold text-xs py-3 rounded-xl shadow active:scale-95 transition-all">
             進入管理者審核後台
           </button>
         </div>
 
-        <!-- 2. 一般老師登入 -->
+        <!-- 2. 老師登入 -->
         <div id="auth-form-teacher" class="hidden space-y-3 pt-2">
           <div class="w-12 h-12 bg-stone-900 border border-stone-800 text-[#d8a46f] rounded-full flex items-center justify-center mx-auto text-lg font-bold shadow-inner">🔐</div>
           <h3 class="font-bold text-sm text-stone-100 tracking-wide">老師後台登入</h3>
@@ -376,7 +402,7 @@
           </button>
         </div>
 
-        <!-- 3. 新老師註冊申請 -->
+        <!-- 3. 新老師註冊 -->
         <form id="auth-form-register" onsubmit="handleTeacherRegister(event)" class="hidden space-y-2.5 text-left text-xs pt-2">
           <div class="text-center mb-2">
             <h3 class="font-bold text-sm text-stone-100">申請加入 MY Growth 師資</h3>
@@ -393,16 +419,16 @@
             </div>
             <div>
               <label class="text-stone-400">稱謂/職稱 <span class="text-rose-400">*</span></label>
-              <input type="text" id="reg-title" required placeholder="例如：體能教練 / 瑜珈導師" class="w-full mt-1 p-2 rounded-xl glass-input text-stone-100 outline-none">
+              <input type="text" id="reg-title" required placeholder="例如：體能教練" class="w-full mt-1 p-2 rounded-xl glass-input text-stone-100 outline-none">
             </div>
           </div>
           <div>
-            <label class="text-stone-400">通知信箱 (接收預約通知) <span class="text-rose-400">*</span></label>
+            <label class="text-stone-400">通知信箱 <span class="text-rose-400">*</span></label>
             <input type="email" id="reg-email" required placeholder="your-email@gmail.com" class="w-full mt-1 p-2 rounded-xl glass-input text-stone-100 outline-none">
           </div>
           <div>
             <label class="text-stone-400">專長領域簡述 <span class="text-rose-400">*</span></label>
-            <input type="text" id="reg-bio" required placeholder="例如：肌力體能 ｜ 增肌減脂 ｜ 拳擊" class="w-full mt-1 p-2 rounded-xl glass-input text-stone-100 outline-none">
+            <input type="text" id="reg-bio" required placeholder="例如：肌力體能 ｜ 增肌減脂" class="w-full mt-1 p-2 rounded-xl glass-input text-stone-100 outline-none">
           </div>
           <div>
             <label class="text-stone-400">個人經歷 (每行一項)</label>
@@ -413,12 +439,12 @@
             <textarea id="reg-certs" rows="2" placeholder="例如：ACE-CPT 國際教練證照" class="w-full mt-1 p-2 rounded-xl glass-input text-stone-100 outline-none"></textarea>
           </div>
           <button type="submit" id="reg-submit-btn" class="w-full mt-2 cta-btn-gradient text-stone-950 font-bold py-3 rounded-xl shadow active:scale-95 transition-all">
-            送出審核申請 (由管理者審核)
+            送出審核申請
           </button>
         </form>
       </div>
 
-      <!-- 後台管理面板 (Ariel 或 一般老師登入後) -->
+      <!-- 後台面板 -->
       <div id="teacher-panel" class="hidden space-y-4">
         
         <!-- 當前登入資訊卡 -->
@@ -440,7 +466,35 @@
           </button>
         </div>
 
-        <!-- 👑 Ariel 管理者審核中心 (僅管理者可見) -->
+        <!-- 主理人專屬：學員堂數管理與儲值 (僅管理者可見) -->
+        <div id="admin-student-hours-section" class="hidden glass-card p-4 rounded-3xl border border-[#d8a46f]/40 shadow-xl space-y-3">
+          <div class="flex items-center gap-2 pb-2 border-b border-stone-800">
+            <span class="text-base">🪙</span>
+            <h3 class="font-bold text-xs text-[#d8a46f]">學員堂數管理與儲值</h3>
+          </div>
+
+          <form onsubmit="handleUpdateStudentHours(event)" class="space-y-2 text-xs">
+            <div class="grid grid-cols-2 gap-2">
+              <div>
+                <label class="text-stone-400">學員手機 <span class="text-rose-400">*</span></label>
+                <input type="tel" id="sh-input-phone" required pattern="^09\d{8}$" placeholder="0912345678" class="w-full mt-1 p-2 rounded-xl glass-input text-stone-100 outline-none">
+              </div>
+              <div>
+                <label class="text-stone-400">學員姓名 <span class="text-rose-400">*</span></label>
+                <input type="text" id="sh-input-name" required placeholder="例如：王小明" class="w-full mt-1 p-2 rounded-xl glass-input text-stone-100 outline-none">
+              </div>
+            </div>
+            <div>
+              <label class="text-stone-400">新增/充值堂數 (輸入堂數，如 10) <span class="text-rose-400">*</span></label>
+              <input type="number" id="sh-input-add" required min="1" placeholder="10" class="w-full mt-1 p-2 rounded-xl glass-input text-stone-100 outline-none">
+            </div>
+            <button type="submit" id="sh-submit-btn" class="w-full mt-1 cta-btn-gradient text-stone-950 font-bold py-2.5 rounded-xl shadow active:scale-95 transition-all">
+              確認儲值堂數
+            </button>
+          </form>
+        </div>
+
+        <!-- Ariel 管理者審核中心 -->
         <div id="admin-review-section" class="hidden glass-card p-4 rounded-3xl border border-amber-500/40 shadow-xl space-y-3">
           <div class="flex justify-between items-center pb-2 border-b border-stone-800">
             <div class="flex items-center gap-2">
@@ -452,7 +506,7 @@
           <div id="pending-teachers-list" class="space-y-3"></div>
         </div>
 
-        <!-- 該月教課時數與學員統計卡片 -->
+        <!-- 該月教課時數統計卡片 -->
         <div class="glass-card p-4 rounded-3xl border border-[#d8a46f]/30 shadow-lg">
           <div class="flex justify-between items-center mb-3">
             <div class="flex items-center gap-2">
@@ -523,7 +577,7 @@
           </form>
         </div>
 
-        <!-- 課程管理列表 (開關狀態與刪除) -->
+        <!-- 課程管理列表 -->
         <div class="glass-card p-4 rounded-3xl">
           <div class="flex justify-between items-center mb-3">
             <h3 class="font-bold text-xs text-stone-200">排程與預約管理</h3>
@@ -563,7 +617,6 @@
   <div id="booking-modal" class="fixed inset-0 bg-black/85 backdrop-blur-md hidden z-50 flex items-end sm:items-center justify-center p-0 sm:p-4">
     <div class="glass-card w-full max-w-md rounded-t-3xl sm:rounded-3xl p-6 shadow-2xl">
       
-      <!-- 頂部標題與步驟指示 -->
       <div class="flex justify-between items-start pb-3 border-b border-stone-800">
         <div>
           <div class="flex items-center gap-2">
@@ -575,11 +628,10 @@
         <button onclick="closeModal()" class="text-stone-400 hover:text-white text-lg">✕</button>
       </div>
 
-      <!-- 表單區塊 -->
       <form id="booking-form" onsubmit="submitBooking(event)" class="mt-4 space-y-3 text-xs">
         <input type="hidden" id="modal-course-id">
 
-        <!-- ================= 步驟一：基本資料填寫 ================= -->
+        <!-- 步驟一：填寫資料 -->
         <div id="modal-step-1" class="space-y-3">
           <div>
             <label class="block font-medium text-stone-300 mb-1">
@@ -605,7 +657,7 @@
           </button>
         </div>
 
-        <!-- ================= 步驟二：T&C 條款確認與勾選 ================= -->
+        <!-- 步驟二：T&C 條款確認 -->
         <div id="modal-step-2" class="hidden space-y-3">
           <div class="text-[11px] text-stone-300 bg-stone-950/80 p-3.5 rounded-2xl border border-stone-800 space-y-2 max-h-56 overflow-y-auto leading-relaxed">
             <p class="font-bold text-[#d8a46f] text-xs">📌 上課規範與取消規則 (T&amp;C)</p>
@@ -619,19 +671,17 @@
             </div>
           </div>
 
-          <!-- 勾選同意框 -->
           <label class="flex items-start gap-2.5 p-2 rounded-xl bg-stone-900/60 border border-stone-800 cursor-pointer select-none">
             <input type="checkbox" id="terms-agree" onchange="toggleCompleteBtn()" class="accent-[#d8a46f] w-4 h-4 mt-0.5 rounded cursor-pointer">
             <span class="text-[11px] text-stone-200 font-medium">我已詳細閱讀、充分了解並同意遵守上述所有上課規範及取消規則。</span>
           </label>
 
-          <!-- 操作按鈕群 -->
           <div class="grid grid-cols-3 gap-2 pt-1">
             <button type="button" onclick="goToStep1()" class="py-3 rounded-xl bg-stone-900 border border-stone-700 text-stone-300 font-semibold text-xs active:scale-95 transition-all">
               ⬅ 上一步
             </button>
             <button type="submit" id="modal-submit-btn" disabled class="col-span-2 py-3 rounded-xl bg-stone-800 text-stone-500 font-bold text-xs cursor-not-allowed transition-all shadow">
-              完成預約並加入行事曆
+              完成預約並扣除 1 堂
             </button>
           </div>
         </div>
@@ -641,11 +691,13 @@
   </div>
 
   <script>
-    const API_URL = 'https://script.google.com/macros/s/AKfycbxDXvP4B-HI4dVpKwBPss1kkGxRO1X0IycmC1KhFJthypb3fNaWLEsPocX5_jFYrBvZ/exec';
+    // 已更新為最新的 Google Apps Script 授權 URL
+    const API_URL = 'https://script.google.com/macros/s/AKfycbxqG4vztFk46QhKSaa-qmlubuc-zsLnLFtgeU61Ds0fELoxP7Ju0GPieDOhwuauDAAy/exec';
 
     let courses = [];
     let bookings = [];
     let teachers = [];
+    let students = [];
 
     let selectedFilterTeacher = null;
     let currentUser = null;
@@ -689,6 +741,7 @@
         courses = data.courses || [];
         bookings = data.bookings || [];
         teachers = data.teachers || [];
+        students = data.students || [];
         statusEl.innerText = '● 雲端即時同步';
 
         renderApprovedTeachers();
@@ -861,7 +914,6 @@
       }).join('');
     }
 
-    // ==================== 彈窗兩步驟流程控制 ====================
     function openBookingModal(courseId) {
       const c = courses.find(item => item.id === courseId);
       if (!c) return;
@@ -939,7 +991,7 @@
 
       const submitBtn = document.getElementById('modal-submit-btn');
       submitBtn.disabled = true;
-      submitBtn.innerText = '同步加入行事曆與發信中...';
+      submitBtn.innerText = '扣除堂數與同步日曆中...';
 
       try {
         const res = await fetch(API_URL, {
@@ -955,7 +1007,7 @@
 
         await fetchData();
         closeModal();
-        alert(`🎉 預約成功！\n確認信已傳遞至 ${userEmail}，且已自動同步加入 Google 行事曆！`);
+        alert(`🎉 預約成功！已自動扣除 1 堂課。\n確認信已傳遞至 ${userEmail}！`);
         
         document.getElementById('user-name').value = '';
         document.getElementById('user-email').value = '';
@@ -965,7 +1017,7 @@
         alert('連線失敗，請檢查網路！');
       } finally {
         submitBtn.disabled = false;
-        submitBtn.innerText = '完成預約並加入行事曆';
+        submitBtn.innerText = '完成預約並扣除 1 堂';
         toggleCompleteBtn();
       }
     }
@@ -1004,6 +1056,19 @@
       const resultsContainer = document.getElementById('my-bookings-results');
       const filterBar = document.getElementById('my-bookings-month-filter');
       const monthLabel = document.getElementById('search-month-label');
+      const hoursCard = document.getElementById('student-hours-card');
+
+      const studentInfo = students.find(s => s.phone === currentSearchPhone);
+      if (studentInfo) {
+        hoursCard.classList.remove('hidden');
+        document.getElementById('sh-name').innerText = studentInfo.name || '親愛的學員';
+        document.getElementById('sh-phone').innerText = `手機：${studentInfo.phone}`;
+        document.getElementById('sh-total').innerHTML = `${studentInfo.totalHours} <span class="text-[9px] font-normal text-stone-400">堂</span>`;
+        document.getElementById('sh-used').innerHTML = `${studentInfo.usedHours} <span class="text-[9px] font-normal text-stone-400">堂</span>`;
+        document.getElementById('sh-remain').innerHTML = `${studentInfo.remainHours} <span class="text-[9px] font-normal text-stone-400">堂</span>`;
+      } else {
+        hoursCard.classList.add('hidden');
+      }
 
       filterBar.classList.remove('hidden');
 
@@ -1044,7 +1109,7 @@
           </div>
           <div class="pt-2 border-t border-stone-800/80 flex justify-end">
             <button onclick="cancelMyBooking('${b.id}')" class="text-xs text-rose-400 hover:text-rose-300 bg-rose-950/40 border border-rose-900/60 px-3 py-1 rounded-xl active:scale-95 transition-all">
-              取消預約
+              取消預約 (自動補回堂數)
             </button>
           </div>
         </div>
@@ -1052,7 +1117,7 @@
     }
 
     async function cancelMyBooking(bookingId) {
-      if (!confirm('【取消提醒】最晚取消時限為開課前一天 23:59 前。\n確定要取消此堂預約嗎？名額將會立即釋出。')) return;
+      if (!confirm('【取消提醒】最晚取消時限為開課前一天 23:59 前。\n取消後該堂數將自動補回您的帳戶，名額亦將立即釋出。確定取消？')) return;
 
       try {
         const res = await fetch(API_URL, {
@@ -1061,13 +1126,47 @@
         });
         const result = await res.json();
         if (result.success) {
-          alert('✅ 已成功取消預約！');
+          alert('✅ 已成功取消預約！堂數已自動補回。');
           await fetchData();
         } else {
           alert('取消失敗');
         }
       } catch (err) {
         alert('連線失敗，請檢查網路！');
+      }
+    }
+
+    async function handleUpdateStudentHours(e) {
+      e.preventDefault();
+      const btn = document.getElementById('sh-submit-btn');
+      btn.disabled = true;
+      btn.innerText = '儲值更新中...';
+
+      const payload = {
+        action: 'UPDATE_STUDENT_HOURS',
+        phone: document.getElementById('sh-input-phone').value.trim(),
+        name: document.getElementById('sh-input-name').value.trim(),
+        addHours: document.getElementById('sh-input-add').value
+      };
+
+      try {
+        const res = await fetch(API_URL, {
+          method: 'POST',
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        if (data.success) {
+          alert(`🎉 ${data.message}`);
+          e.target.reset();
+          await fetchData();
+        } else {
+          alert('儲值失敗：' + data.message);
+        }
+      } catch (err) {
+        alert('伺服器連線失敗');
+      } finally {
+        btn.disabled = false;
+        btn.innerText = '確認儲值堂數';
       }
     }
 
@@ -1195,7 +1294,7 @@
         alert('註冊失敗，請檢查網路！');
       } finally {
         btn.disabled = false;
-        btn.innerText = '送出審核申請 (由管理者審核)';
+        btn.innerText = '送出審核申請';
       }
     }
 
@@ -1208,6 +1307,7 @@
         document.getElementById('current-user-name').innerText = 'Ariel Kuo';
         document.getElementById('new-course-teacher').value = 'Ariel Kuo';
         document.getElementById('admin-review-section').classList.remove('hidden');
+        document.getElementById('admin-student-hours-section').classList.remove('hidden');
         renderAdminReviewCenter();
       } else {
         document.getElementById('current-user-avatar').innerText = currentUser.name.charAt(0);
@@ -1216,6 +1316,7 @@
         document.getElementById('new-course-teacher').value = currentUser.name;
         document.getElementById('new-course-teacher-email').value = currentUser.email || '';
         document.getElementById('admin-review-section').classList.add('hidden');
+        document.getElementById('admin-student-hours-section').classList.add('hidden');
       }
 
       renderTeacherCourses();
@@ -1227,6 +1328,7 @@
       document.getElementById('teacher-auth-box').classList.remove('hidden');
       document.getElementById('teacher-panel').classList.add('hidden');
       document.getElementById('admin-review-section').classList.add('hidden');
+      document.getElementById('admin-student-hours-section').classList.add('hidden');
       document.getElementById('admin-login-pwd').value = '';
       document.getElementById('teacher-login-pwd').value = '';
     }
@@ -1469,7 +1571,7 @@
           vMyBookings.classList.remove('hidden');
           nMyBookings.classList.replace('text-stone-400', 'text-[#d8a46f]');
           hTitle.innerText = '我的預約查詢';
-          hSub.innerText = '輸入手機號碼即時檢視預約狀態';
+          hSub.innerText = '輸入手機號碼即時檢視預約狀態與剩餘堂數';
         } else if (role === 'teachers-info') {
           vTeachersInfo.classList.remove('hidden');
           nTeachersInfo.classList.replace('text-stone-400', 'text-[#d8a46f]');
